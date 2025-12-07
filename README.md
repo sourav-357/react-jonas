@@ -1,68 +1,151 @@
-# Course Material and FAQ for the Ultimate React Course
+# React – Jonas Schmedtmann Course (My Learning Repository)
 
-This branch of the repo contains starter files and final code for all sections and projects of the course, **exactly as shown in the videos**.
+This repository contains all of my code, exercises, notes, and project implementations while following **Jonas Schmedtmann’s Ultimate React Course**.  
+The goal of this repo is to **build a deep, practical understanding of modern React**, improve code quality, and develop production-style habits.
 
-Use starter code to start each section, and **final code to compare it with your own code whenever something doesn't work**!
+I will update this repository regularly as I move through each section.
 
-🚨 **_Please read the following Frequently Asked Questions (FAQ) carefully before starting the course_** 🚨
+---
 
-## FAQ
+## 📘 Course Structure (My Folder Breakdown)
 
-### Q1: How do I download the files?
+```
+00-setup/
+01-pure-react/
+02-JS-review/
+03-pizza-menu/
+04-steps/
+05-travel-list/
+06-eat-n-split/
+07-usepopcorn/
+08-how-react-works/
+09-classy-weather/
+10-react-quiz/
+11-worldwise/
+12-atomic-blog/
+13-workout-timer/
+15-redux-intro/
+16-fast-react-pizza/
+17-the-wild-oasis/
+20-manual-ssr/
+21-the-wild-oasis-website/
+22-nextjs-pages-router/
+README.md
+```
 
-**A:** If you just want to download the entire code, click the green button saying "Code", and then choose the "Download ZIP" option. If you can't see the button (on mobile), use [this link](https://github.com/jonasschmedtmann/ultimate-react-course/archive/main.zip) instead.
+Each folder contains:
+- Starter files (from the course)
+- My implementation of lectures
+- Notes / improvements
+- Fixes & comments where I got stuck
 
-### Q2: I'm stuck! Where do I get help?
+---
 
-**A:** Have you tried to fix the problem on your own? **Have you compared your code with the final code?** Are you using the library versions as indicated in the course videos? If you failed fixing your problem, please **post a detailed description of the problem to the Q&A area of that video over at Udemy**, along with a link to a [codesandbox](https://codesandbox.io/) containing your code.
+## 🎯 My Learning Goals
 
-### Q3: Can I see a final version of the course projects?
+- Build a **strong foundation** in JSX, components, props, and state.
+- Master **Hooks**, state management patterns, and side-effects.
+- Understand **React Router**, navigation flow, loaders, actions.
+- Use **APIs**, async workflows, and error boundaries properly.
+- Learn **Redux** + Redux Toolkit (modern recommended patterns).
+- Build production-level apps with **React Query**, **Supabase**, **Tailwind**, and **React Hook Form**.
+- Understand the **Next.js App Router**, server components, and deployments.
+- Develop a clean coding style with reusable, readable components.
 
-**A:** Sure! Here you go:
+---
 
-- [Pizza Menu](https://fast-react-pizza-menu.netlify.app/) (Components, props, JSX)
-- [Travel List](https://travel-list-jonas.netlify.app/) (useState and state management)
-- [Eat-n-split](https://eat-n-split.netlify.app/) (Practice project)
-- [usePopcorn](https://usepopcorn.netlify.app) (useEffect, data fetching, custom hooks)
-- [Classy weather](https://classy-weather.netlify.app/) (Class components)
-- [Quiz App](https://the-react-quiz.netlify.app/) (useReducer)
-- [WorldWise](https://worldwise-jonas.netlify.app/) (React Router, context API, memo, useMemo, useCallback)
-- [Fast React Pizza](https://fast-react-pizza.netlify.app/) (React Router data loading, Redux, Redux Toolkit, thunks, Tailwind CSS)
-- [The Wild Oasis](https://the-wild-oasis.vercel.app) (React Query, Styled Components, React Hook Form, Supabase, advanced compound component pattern, authentication, charts, dark mode, professional application planning and development)
-- [The Wild Oasis Website](https://the-wild-oasis-website.vercel.app/) (Next.js "app" router, React Server Components, server actions, authentication with NextAuth)
+## 🧪 Projects Covered in This Repo
 
-### Q4: What VSCode theme are you using?
+| Project | Topics | Live Demo (Mine) |
+|--------|--------|------------------|
+| Pizza Menu | Components, Props, JSX | _coming soon_ |
+| Travel List | useState, state logic | _coming soon_ |
+| Eat-n-Split | UI state management | _coming soon_ |
+| usePopcorn | useEffect, fetching, custom hooks | _coming soon_ |
+| Classy Weather | Class components | _coming soon_ |
+| React Quiz | useReducer, timers | _coming soon_ |
+| WorldWise | React Router, context API, memo, useCallback | _coming soon_ |
+| Fast React Pizza | Routing loaders, Redux Toolkit, Tailwind CSS | _coming soon_ |
+| The Wild Oasis | React Query, Supabase, Auth, Styled Components | _coming soon_ |
+| The Wild Oasis Website | Next.js App Router, server actions, RSC | _coming soon_ |
 
-**A:** I use [One Monokai](https://marketplace.visualstudio.com/items?itemName=azemoh.one-monokai) in this course. For the icons, I'm using [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme).
+_(I will add my deployed links here as soon as each project is completed.)_
 
-### Q5: Videos don't load, can you fix it?
+---
 
-**A:** Unfortunately, there is nothing I can do about it. The course is hosted on Udemy, and sometimes they have technical issues. Please just come back a bit later or [contact their support team](https://support.udemy.com/hc/en-us).
+## 🛠️ Tech & Tools I’m Using
 
-### Q6: Videos are blurred / have low quality, can you fix it?
+- **React (Vite / CRA)**
+- **React Router**
+- **Redux Toolkit**
+- **React Query**
+- **Supabase**
+- **Tailwind CSS**
+- **Styled Components**
+- **React Hook Form**
+- **Next.js (App Router)**
+- **Git & GitHub**
 
-**A:** Please open video settings and change the quality from 'Auto' to another value, for example 720p. If that doesn't help, please [contact the Udemy support team](https://support.udemy.com/hc/en-us).
+---
 
-### Q7: Are videos downloadable?
+## 🚀 How To Run Any Project
 
-**A:** Videos used to be downloadable, but unfortunately, Udemy has disabled video downloads on all my courses in order to fight piracy. There is nothing I can do about this.
+Navigate into a project folder:
 
-### Q8: I want to put these projects in my portfolio. Is that allowed?
+```bash
+cd 05-travel-list
+```
 
-**A:** Absolutely! Just make sure you actually built them yourself by following the course, and that you understand what you did. What is **not allowed** is that you create your own course/videos/articles based on this course's content!
+Install dependencies:
 
-### Q9: I love your courses and want to get updates on new ones. How?
+```bash
+npm install
+```
 
-**A:** First, you can subscribe to my email list [at my website](http://codingheroes.io/resources). Plus, I make important announcements on twitter [@jonasschmedtman](https://twitter.com/jonasschmedtman), so you should definitely follow me there 🔥
+Start the development server:
 
-### Q10: How do I get my certificate of completion?
+```bash
+npm run dev
+```
 
-**A:** A certificate of completion is provided by Udemy after you complete 100% of the course. After completing the course, just click on the "Your progress" indicator in the top right-hand corner of the course page. If you want to change your name on the certificate, please [contact the Udemy support team](https://support.udemy.com/hc/en-us).
+---
 
-### Q11: Can you add subtitles in my language?
+## 📈 My Progress Log
 
-**A:** No. I provide professional English captions, but Udemy is responsible for subtitles in all other languages (automatic translations). So please [contact the Udemy support team](https://support.udemy.com/hc/en-us) to request your own language.
+- **Week 1 → Basics + JSX + Components**
+- **Week 2 → Hooks (state, effect, reducer) + custom hooks**
+- **Week 3 → React Router + API workflows + performance**
+- **Week 4 → Redux + React Query + advanced patterns**
+- **Week 5 → Next.js + server components**
 
-### Q12: Do you accept pull requests?
+I will update this section as I complete modules.
 
-**A:** No, because this repository should contain the _exact_ same code that is shown in the videos. _However, feel free to add an issue if you found one._
+---
+
+## 📝 Notes
+
+This is a **learning repository**, so you may find:
+- multiple versions of the same component (before/after refactor)
+- comments explaining tricky parts
+- debugging attempts
+- personal improvements beyond the video
+
+Everything here is written by me while studying, not copied from final solutions.
+
+---
+
+## 🎯 Final Goal
+
+By the end of this repo, I aim to have:
+- A complete understanding of modern React
+- Multiple deployed, resume-worthy projects
+- Clean and structured coding habits
+- Strong preparation for **Next.js**, **TypeScript**, and **full-stack apps**
+
+---
+
+## 📬 Feedback
+
+If you find issues or want to give suggestions, feel free to open an issue.  
+I’m continuously improving this repo as I learn.
+
