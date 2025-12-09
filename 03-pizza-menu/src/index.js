@@ -46,7 +46,8 @@ const pizzaData = [
   },
 ];
 
-function App() { // Placing all components of the project
+// Placing all components of the project
+function App() {
   return (
     <div>
       <Header />
@@ -56,26 +57,39 @@ function App() { // Placing all components of the project
   );
 }
 
-function Header() { // creating the header component
+// creating the header component
+function Header() {
   return <h1>Fast React Pizza Co.</h1>;
 }
 
-function Menu() { // creating the Menu component
+// creating the Menu component
+function Menu() {
   return (
     <div>
       <h2> Our Menu </h2>
+      <Pizza />
+      <Pizza />
+      <Pizza />
       <Pizza />
     </div>
   );
 }
 
-function Footer() { // creating the Footer component
+// creating the Footer component
+function Footer() {
+  const hour = new Date().getHours();
+  const openHour = 8;
+  const closeHour = 22;
+  const isOpen = hour <= closeHour && hour >= openHour;
+  console.log(isOpen);
+
   return (
     <footer> {new Date().toLocaleDateString()} We're currently open! </footer>
   );
 }
 
-function Pizza() { // creating the Body of Menu() component
+// creating the Body of Menu() component
+function Pizza() {
   return (
     <div>
       <img src="pizzas/spinaci.jpg" alt="spinachi" />
