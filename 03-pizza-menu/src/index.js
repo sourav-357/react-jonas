@@ -108,7 +108,6 @@ function Pizza({ pizzObj }) {
   );
 }
 
-// creating the Footer component
 function Footer() {
   const hour = new Date().getHours();
   const openHour = 8;
