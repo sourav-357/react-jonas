@@ -46,16 +46,36 @@ const pizzaData = [
   },
 ];
 
-function App() {
+function App() { // Placing all components of the project
   return (
     <div>
-      <h1>Hello React!</h1>
+      <Header />
+      <Menu />
+      <Footer />
+    </div>
+  );
+}
+
+function Header() { // creating the header component
+  return <h1>Fast React Pizza Co.</h1>;
+}
+
+function Menu() { // creating the Menu component
+  return (
+    <div>
+      <h2> Our Menu </h2>
       <Pizza />
     </div>
   );
 }
 
-function Pizza() {
+function Footer() { // creating the Footer component
+  return (
+    <footer> {new Date().toLocaleDateString()} We're currently open! </footer>
+  );
+}
+
+function Pizza() { // creating the Body of Menu() component
   return (
     <div>
       <img src="pizzas/spinaci.jpg" alt="spinachi" />
