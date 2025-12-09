@@ -87,18 +87,18 @@ function Menu() {
 }
 
 // creating the Body of Menu() component
-function Pizza(props) {
-  if (props.pizzObj.soldOut) {
+function Pizza({ pizzObj }) {
+  if (pizzObj.soldOut) {
     return null;
   }
 
   return (
     <li className="pizza">
-      <img src={props.pizzObj.photoName} alt={props.pizzObj.name} />
+      <img src={pizzObj.photoName} alt={pizzObj.name} />
       <div>
-        <h3>{props.pizzObj.name}</h3>
-        <p>{props.pizzObj.ingredients}</p>
-        <span>{props.pizzObj.price}</span>
+        <h3>{pizzObj.name}</h3>
+        <p>{pizzObj.ingredients}</p>
+        <span>{pizzObj.price}</span>
       </div>
     </li>
   );
@@ -125,11 +125,12 @@ function Footer() {
   );
 }
 
-function Order(props) {
+function Order({ closeHour, openHour }) {
   return (
     <div className="order">
       <p>
-        We're open until {props.closeHour}:00. Come visit us or order online.
+        We're open from {openHour} to {closeHour}:00. Come visit us or order
+        online.
       </p>
       <button className="btn">Order</button>
     </div>
