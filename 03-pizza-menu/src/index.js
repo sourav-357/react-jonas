@@ -69,15 +69,18 @@ function Header() {
 
 // creating the Menu component
 function Menu() {
+  const numPizza = pizzaData.length;
   return (
     <main className="menu">
       <h2> Our Menu </h2>
-
-      <ul className="pizzas">
-        {pizzaData.map((pizza) => (
-          <Pizza pizzObj={pizza} key={pizza.name} />
-        ))}
-      </ul>
+      {/* using the && operator */}
+      {numPizza > 0 && (
+        <ul className="pizzas">
+          {pizzaData.map((pizza) => (
+            <Pizza pizzObj={pizza} key={pizza.name} />
+          ))}
+        </ul>
+      )}
       {/* <Pizza
         name="Pizza Spinachi"
         ingredients="Tomato, mozarella, spinach, and ricotta cheese"
@@ -119,7 +122,13 @@ function Footer() {
 
   return (
     <footer className="footer">
-      {new Date().toLocaleDateString()} We're currently open!
+      {/* using the && operator */}
+      {isOpen && ( 
+        <div className="order">
+          <p>We're open until {closeHour}:00. Come visit us or order online.</p>
+          <button className="btn">Order</button>
+        </div>
+      )}
     </footer>
   );
 }
