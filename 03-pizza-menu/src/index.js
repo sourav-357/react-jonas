@@ -50,7 +50,7 @@ const pizzaData = [
 // Placing all components of the project
 function App() {
   return (
-    <div>
+    <div className="container">
       <Header />
       <Menu />
       <Footer />
@@ -60,19 +60,44 @@ function App() {
 
 // creating the header component
 function Header() {
-  const style = { color: "red", fontSize: "48px", textTransform: "uppercase" };
-  return <h1 style={style}>Fast React Pizza Co.</h1>;
+  return (
+    <header className="header">
+      <h1>Fast React Pizza Co.</h1>;
+    </header>
+  );
 }
 
 // creating the Menu component
 function Menu() {
   return (
-    <div>
+    <main className="menu">
       <h2> Our Menu </h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <Pizza
+        name="Pizza Spinachi"
+        ingredients="Tomato, mozarella, spinach, and ricotta cheese"
+        photoName="pizzas/spinaci.jpg"
+        price={12}
+      />
+      <Pizza
+        name="Pizza Funghi"
+        ingredients="Tomato, mushroom"
+        photoName="pizzas/funghi.jpg"
+        price={10}
+      />
+    </main>
+  );
+}
+
+// creating the Body of Menu() component
+function Pizza(props) {
+  return (
+    <div className="pizza">
+      <img src={props.photoName} alt={props.name} />
+      <div>
+        <h3>{props.name}</h3>
+        <p>{props.ingredients}</p>
+        <span>{props.price + 3}</span>
+      </div>
     </div>
   );
 }
@@ -86,18 +111,9 @@ function Footer() {
   console.log(isOpen);
 
   return (
-    <footer> {new Date().toLocaleDateString()} We're currently open! </footer>
-  );
-}
-
-// creating the Body of Menu() component
-function Pizza() {
-  return (
-    <div>
-      <img src="pizzas/spinaci.jpg" alt="spinachi" />
-      <h2>Pizza Spinaci</h2>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
-    </div>
+    <footer className="footer">
+      {new Date().toLocaleDateString()} We're currently open!
+    </footer>
   );
 }
 
