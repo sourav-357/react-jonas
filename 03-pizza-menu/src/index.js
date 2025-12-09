@@ -73,33 +73,26 @@ function Menu() {
   return (
     <main className="menu">
       <h2> Our Menu </h2>
-      {/* using the && operator */}
-      {numPizza > 0 && (
+      {numPizza > 0 ? (
         <ul className="pizzas">
           {pizzaData.map((pizza) => (
             <Pizza pizzObj={pizza} key={pizza.name} />
           ))}
         </ul>
+      ) : (
+        <p>We are still working on our menu. Please come back later.</p>
       )}
-      {/* <Pizza
-        name="Pizza Spinachi"
-        ingredients="Tomato, mozarella, spinach, and ricotta cheese"
-        photoName="pizzas/spinaci.jpg"
-        price={12}
-      />
-
-      <Pizza
-        name="Pizza Funghi"
-        ingredients="Tomato, mushroom"
-        photoName="pizzas/funghi.jpg"
-        price={10}
-      /> */}
     </main>
   );
 }
 
 // creating the Body of Menu() component
 function Pizza(props) {
+
+  if (props.pizzObj.soldOut) {
+    return null;
+  }
+
   return (
     <li className="pizza">
       <img src={props.pizzObj.photoName} alt={props.pizzObj.name} />
@@ -122,12 +115,15 @@ function Footer() {
 
   return (
     <footer className="footer">
-      {/* using the && operator */}
-      {isOpen && ( 
+      {isOpen ? (
         <div className="order">
           <p>We're open until {closeHour}:00. Come visit us or order online.</p>
           <button className="btn">Order</button>
         </div>
+      ) : (
+        <p>
+          We're happy to welcome you between {openHour}:00 and {closeHour}:00{" "}
+        </p>
       )}
     </footer>
   );
