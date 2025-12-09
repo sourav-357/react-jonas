@@ -47,7 +47,6 @@ const pizzaData = [
   },
 ];
 
-// Placing all components of the project
 function App() {
   return (
     <div className="container">
@@ -58,7 +57,6 @@ function App() {
   );
 }
 
-// creating the header component
 function Header() {
   return (
     <header className="header">
@@ -67,7 +65,6 @@ function Header() {
   );
 }
 
-// creating the Menu component
 function Menu() {
   const numPizza = pizzaData.length;
   return (
@@ -94,7 +91,6 @@ function Menu() {
   );
 }
 
-// creating the Body of Menu() component
 function Pizza({ pizzObj }) {
   return (
     <li className = { `pizza ${pizzObj.soldOut ? "sold-out" : ""}` } >
