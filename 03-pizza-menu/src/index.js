@@ -62,7 +62,7 @@ function App() {
 function Header() {
   return (
     <header className="header">
-      <h1>Fast React Pizza Co.</h1>;
+      <h1>Fast React Pizza Co.</h1>
     </header>
   );
 }
@@ -72,18 +72,25 @@ function Menu() {
   return (
     <main className="menu">
       <h2> Our Menu </h2>
-      <Pizza
+
+      <ul className="pizzas">
+        {pizzaData.map((pizza) => (
+          <Pizza pizzObj={pizza} key={pizza.name} />
+        ))}
+      </ul>
+      {/* <Pizza
         name="Pizza Spinachi"
         ingredients="Tomato, mozarella, spinach, and ricotta cheese"
         photoName="pizzas/spinaci.jpg"
         price={12}
       />
+
       <Pizza
         name="Pizza Funghi"
         ingredients="Tomato, mushroom"
         photoName="pizzas/funghi.jpg"
         price={10}
-      />
+      /> */}
     </main>
   );
 }
@@ -91,14 +98,14 @@ function Menu() {
 // creating the Body of Menu() component
 function Pizza(props) {
   return (
-    <div className="pizza">
-      <img src={props.photoName} alt={props.name} />
+    <li className="pizza">
+      <img src={props.pizzObj.photoName} alt={props.pizzObj.name} />
       <div>
-        <h3>{props.name}</h3>
-        <p>{props.ingredients}</p>
-        <span>{props.price + 3}</span>
+        <h3>{props.pizzObj.name}</h3>
+        <p>{props.pizzObj.ingredients}</p>
+        <span>{props.pizzObj.price}</span>
       </div>
-    </div>
+    </li>
   );
 }
 
