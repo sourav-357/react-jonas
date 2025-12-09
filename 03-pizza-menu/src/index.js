@@ -96,17 +96,13 @@ function Menu() {
 
 // creating the Body of Menu() component
 function Pizza({ pizzObj }) {
-  if (pizzObj.soldOut) {
-    return null;
-  }
-
   return (
-    <li className="pizza">
+    <li className = { `pizza ${pizzObj.soldOut ? "sold-out" : ""}` } >
       <img src={pizzObj.photoName} alt={pizzObj.name} />
       <div>
         <h3>{pizzObj.name}</h3>
         <p>{pizzObj.ingredients}</p>
-        <span>{pizzObj.price}</span>
+        <span>{pizzObj.soldOut ? "SOLD OUT" : pizzObj.price}</span>
       </div>
     </li>
   );
